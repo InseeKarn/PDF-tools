@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+
+
+        
+    </script>
+    <meta charset="UTF-8">
+    <title>PDF Tools</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>🔧 PDF Tools</h1>
+    <div class="form-grid">
+
+    <form action="/merge" method="post" enctype="multipart/form-data">
+        <h3>➕ รวม PDF</h3>
+        <input class="choose" type="file" name="pdfs" multiple required>
+        <button type="submit">รวมไฟล์</button>
+    </form>
+
+    <form action="/split" method="post" enctype="multipart/form-data">
+        <h3>✂️ แยกหน้า PDF</h3>
+        <input class="choose" type="file" name="pdf_file" required>
+        <input type="text" name="page_num" placeholder="หน้าที่ต้องการแยก (เช่น 1)" required>
+        <button type="submit">แยกหน้า</button>
+    </form>
+
+    <form action="/extract" method="post" enctype="multipart/form-data">
+        <h3>📄 ดึงข้อความ PDF</h3>
+        <input class="choose" type="file" name="pdf_file" required>
+        <button type="submit">ดึงข้อความ</button>
+    </form>
+
+    <form action="/decrypt" method="post" enctype="multipart/form-data">
+        <h3>🔓 ลบรหัสผ่าน PDF</h3>
+        <input class="choose" type="file" name="pdf_file" required>
+        <input type="text" name="password" placeholder="รหัสผ่าน PDF">
+        <button type="submit">ถอดรหัส</button>
+    </form>
+    </div>
+</body>
+</html>
