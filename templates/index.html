@@ -2,9 +2,6 @@
 <html>
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-
-        
     </script>
     <meta charset="UTF-8">
     <title>PDF Tools</title>
@@ -15,30 +12,27 @@
     <div class="form-grid">
 
     <form action="/merge" method="post" enctype="multipart/form-data">
-        <h3>➕ รวม PDF</h3>
+        <h3>➕ Merge PDF</h3>
         <input class="choose" type="file" name="pdfs" multiple required>
-        <button type="submit">รวมไฟล์</button>
+        <button type="submit">Merge Files</button>
     </form>
 
     <form action="/split" method="post" enctype="multipart/form-data">
-        <h3>✂️ แยกหน้า PDF</h3>
+        <h3>✂️ Split PDF Pages</h3>
         <input class="choose" type="file" name="pdf_file" required>
-        <input type="text" name="page_num" placeholder="หน้าที่ต้องการแยก (เช่น 1)" required>
-        <button type="submit">แยกหน้า</button>
+        <input type="text" name="page_num" placeholder="Pages to split (e.g. 1)" required>
+        <button type="submit">Split Pages</button>
     </form>
 
     <form action="/extract" method="post" enctype="multipart/form-data">
-        <h3>📄 ดึงข้อความ PDF</h3>
+        <h3>📄 Extract PDF Text</h3>
         <input class="choose" type="file" name="pdf_file" required>
-        <button type="submit">ดึงข้อความ</button>
+        <button type="submit">Extract Text</button>
     </form>
 
     <form action="/decrypt" method="post" enctype="multipart/form-data">
-        <h3>🔓 ลบรหัสผ่าน PDF</h3>
+        <h3>🔓 Remove PDF Password</h3>
         <input class="choose" type="file" name="pdf_file" required>
-        <input type="text" name="password" placeholder="รหัสผ่าน PDF">
-        <button type="submit">ถอดรหัส</button>
+        <input type="text" name="password" placeholder="PDF Password">
+        <button type="submit">Decrypt</button>
     </form>
-    </div>
-</body>
-</html>

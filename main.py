@@ -5,7 +5,7 @@ from pypdf import PdfReader, PdfWriter
 import pdfplumber
 import uuid
 import html
-import flitz
+# import flitz
 
 app = Flask(__name__)
 app.secret_key = "123"
